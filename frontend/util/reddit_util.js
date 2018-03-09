@@ -1,7 +1,7 @@
-import fetchJsonp from 'fetch-jsonp';
+// import fetchJsonp from 'fetch-jsonp';
 
 export default class RedditAPI {
-  static async getPosts(subreddit) {
+  static async getPosts() {
     try {
       let response = await fetch("https://www.reddit.com/r/todayilearned.json", {
         method: 'GET',
