@@ -29,19 +29,15 @@ export default class RedditAPI {
     }
   }
 
-  static async getSearchSubreddits() {
+  static async getSearchSubreddits(query) {
     try {
-      let response = await fetchJsonp("https://www.reddit.com/subreddits/search?q=today", {
+      let response = await fetch(`https://www.reddit.com/api/subreddit_autocomplete_v2.json?query=${query}`, {
         method: 'GET',
-        // mode: 'cors',
         headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Content-Type': 'multipart/form-data',
           'Accept': 'application/json',
-        },
-
+        }
       });
-      return response;
+      return response.json();
     } catch (error) {
       console.error(error);
     }

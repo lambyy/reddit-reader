@@ -6,7 +6,7 @@ import RedditAPI from './util/reddit_util';
 // require('es6-promise').polyfill();
 
 document.addEventListener("DOMContentLoaded", () => {
-  // let response = RedditAPI.getPosts();
+  // let response = RedditAPI.getPosts('todayilearned');
   // console.log(response);
   // let response2 = RedditAPI.getSearchSubreddits();
   // console.log(response2);
