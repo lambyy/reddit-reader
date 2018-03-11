@@ -17,6 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   ReactDOM.render(<Root store={store} />, root);
 
-  let a = requestPosts();
+  let a = requestPosts('todayilearned');
   a(store.dispatch);
 });
