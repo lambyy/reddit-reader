@@ -29,7 +29,7 @@ export default class RedditAPI {
     }
   }
 
-  static async getSearchSubreddits(query) {
+  static async getSubreddits(query) {
     try {
       let response = await fetch(`https://www.reddit.com/api/subreddit_autocomplete_v2.json?query=${query}`, {
         method: 'GET',
