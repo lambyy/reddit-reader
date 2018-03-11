@@ -19,7 +19,6 @@ class PostIndex extends React.Component {
 
     return (
       <div>
-        POST INDEX!
         {postsList}
       </div>
     );
