@@ -3,7 +3,7 @@ import PostContainer from './post_container';
 
 const App = () => (
   <div>
-    <div>Reddit Reader</div>
+    <h1 className="header">Reddit Reader</h1>
     <PostContainer />
   </div>
 );
