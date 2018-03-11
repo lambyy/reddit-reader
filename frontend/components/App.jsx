@@ -1,5 +1,5 @@
 import React from 'react';
-import PostContainer from './post_container';
+import PostContainer from './post/post_container';
 
 const App = () => (
   <div>
