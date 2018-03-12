@@ -14,7 +14,7 @@ const Post = ({ post }) => {
       </a>
       <div className="details">
         <div className="title">
-          <a href={post.url}>{post.title}</a> &nbsp;
+          <a href={post.url} target="_blank">{post.title}</a> &nbsp;
           ({post.domain})
         </div>
         <div>/r/{post.subreddit}</div>
