@@ -10,7 +10,6 @@ class SearchResultIndex extends React.Component {
   subscribe(subreddit) {
     return () => {
       this.props.requestPosts(subreddit);
-      this.props.removeSubreddit(subreddit);
     };
   }
 

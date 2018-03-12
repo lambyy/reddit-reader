@@ -1,16 +1,10 @@
 import RedditAPI from '../util/reddit_util';
 
-export const RECEIVE_SUBREDDITS = "RECEIVE_SUBREDDITS";
-export const REMOVE_SUBREDDIT = "REMOVE_SUBREDDIT";
+export const RECEIVE_RESULTS = "RECEIVE_RESULTS";
 
-const receiveSubreddits = (subreddits) => ({
-  type: RECEIVE_SUBREDDITS,
+const receiveResults = (subreddits) => ({
+  type: RECEIVE_RESULTS,
   subreddits
-});
-
-export const removeSubreddit = (subreddit) => ({
-  type: REMOVE_SUBREDDIT,
-  subreddit
 });
 
 export const searchSubreddit = (query) => dispatch => (
@@ -20,6 +14,6 @@ export const searchSubreddit = (query) => dispatch => (
         const url = result.data.url;
         return url ? url.slice(3, -1) : "";
       });
-      return dispatch(receiveSubreddits(results));
+      return dispatch(receiveResults(results));
     })
 );

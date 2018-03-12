@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { requestPosts } from '../../actions/post_actions';
-import { removeSubreddit } from '../../actions/search_actions';
+import { removeResult } from '../../actions/search_actions';
 import SearchResultIndex from './search_result_index';
 
 const filterResults = (state) => {
@@ -16,8 +16,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  requestPosts: (subreddit) => dispatch(requestPosts(subreddit)),
-  removeSubreddit: (subreddit) => dispatch(removeSubreddit(subreddit))
+  requestPosts: (subreddit) => dispatch(requestPosts(subreddit))
 });
 
 export default connect(
