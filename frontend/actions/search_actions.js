@@ -16,7 +16,10 @@ export const removeSubreddit = (subreddit) => ({
 export const searchSubreddit = (query) => dispatch => (
   RedditAPI.getSubreddits(query)
     .then(response => {
-      const results = response.data.children.map(result => result.data.url.slice(3, -1));
+      const results = response.data.children.map(result => {
+        const url = result.data.url;
+        return url ? url.slice(3, -1) : "";
+      });
       return dispatch(receiveSubreddits(results));
     })
 );
