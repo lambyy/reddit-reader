@@ -15,7 +15,7 @@ class SearchResultIndex extends React.Component {
 
   render() {
     const { results } = this.props;
-    let resultsList = <div className="no-results">No subreddits found</div>;
+    let resultsList = <div className="none">No subreddits found</div>;
 
     if (results.length !== 0) {
       resultsList = results.map( (result, idx) =>

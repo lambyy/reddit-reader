@@ -124,9 +124,10 @@ a {
 	display: flex;
 	justify-content: space-between;
 	padding: 3px;
+	text-align: center;
 }
 
-.no-results {
+.none {
 	font-size: 12px;
 	text-align: center;
 }
