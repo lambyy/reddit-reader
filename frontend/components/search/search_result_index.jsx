@@ -23,7 +23,7 @@ class SearchResultIndex extends React.Component {
     );
 
     return (
-      <div>
+      <div className="results">
         {resultsList}
       </div>
     );

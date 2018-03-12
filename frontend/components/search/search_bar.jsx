@@ -22,7 +22,7 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <form>
+      <form className="search-bar">
         <input type="text"
           onChange={this.updateQuery}
           value={this.state.query}/>

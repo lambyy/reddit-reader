@@ -1,4 +1,5 @@
-/* http://meyerweb.com/eric/tools/css/reset/
+/* CSS reset from:
+	 http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -36,6 +37,35 @@ ol, ul {
 }
 a {
   text-decoration: none;
+}
+
+.reddit-reader {
+	display: grid;
+	grid-template-columns: 1fr 25%;
+	grid-template-rows: 24px auto auto 1fr;
+	grid-template-areas:
+		"header header"
+		"subscriptions subscriptions"
+		"posts search-bar"
+		"posts results";
+}
+
+.header {
+	grid-area: header;
+}
+
+.posts {
+	grid-area: posts;
+	border-right: 1px solid #d1d2d3;
+	border-top: 1px solid #d1d2d3;
+}
+
+.search-bar {
+	grid-area: search-bar;
+}
+
+.results {
+	grid-area: results;
 }
 
 .post {

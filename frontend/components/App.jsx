@@ -5,7 +5,7 @@ import PostContainer from './post/post_container';
 
 
 const App = () => (
-  <div>
+  <div className="reddit-reader">
     <h1 className="header">Reddit Reader</h1>
     <SearchBarContainer />
     <SearchResultContainer />
