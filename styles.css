@@ -38,10 +38,13 @@ ol, ul {
 a {
   text-decoration: none;
 }
+button {
+	margin: 3px;
+}
 
 .reddit-reader {
 	display: grid;
-	grid-template-columns: 1fr 25%;
+	grid-template-columns: 3fr 1fr;
 	grid-template-rows: auto auto auto 1fr;
 	grid-template-areas:
 		"header header"
@@ -57,7 +60,6 @@ a {
 	background-color: #cee3f8;
 	border-bottom: 1px solid #5f99cf;
 }
-
 .header img {
 	height: 40px;
 }
@@ -66,12 +68,12 @@ a {
 	grid-area: subscriptions;
 	display: grid;
 	grid-template-columns: auto 1fr;
-	margin: 15px 12px 10px 12px;
+	padding: 15px 12px;
+	border-bottom: 1px solid #d1d2d3;
 }
 
 .list {
 	display: flex;
-	align-items: center;
 	flex-wrap: wrap;
 }
 
@@ -84,31 +86,21 @@ a {
 	background-color: #7bb850;
 	border-radius: 2px;
 }
-
 .subscription button {
 	margin-left: 3px;
 	border: none;
 	background-color: transparent;
 	color: white;
 }
-
 .subscription button:hover {
 	cursor: pointer;
 }
 
-.posts {
-	grid-area: posts;
-	border-right: 1px solid #d1d2d3;
-	border-top: 1px solid #d1d2d3;
-}
-
 .search-bar {
 	grid-area: search-bar;
-	border-top: 1px solid #d1d2d3;
-	padding: 18px 5px 10px 10px;
+	padding: 18px 5px 2px 10px;
 	font-size: 12px;
 }
-
 .search-bar input[type="text"] {
 	width: 70%;
 	margin: 2px 3px 0 0;
@@ -117,26 +109,30 @@ a {
 
 .results {
 	grid-area: results;
-	padding: 0 12px;
+	padding: 12px;
 }
-
 .result {
 	display: flex;
 	justify-content: space-between;
-	padding: 3px;
-	text-align: center;
+	align-items: center;
+	padding: 1px;
 }
 
 .none {
 	font-size: 12px;
 	text-align: center;
+	padding-top: 7px;
 }
 
+.posts {
+	grid-area: posts;
+	min-height: 82vh;
+	border-right: 1px solid #d1d2d3;
+}
 .post {
   display: flex;
   border-bottom: 1px solid #d1d2d3;
-  margin: 5px;
-  padding: 5px 5px 10px 15px;
+  padding: 15px 20px;
   font-size: 12px;
   color: #6a6c6d;
 }
@@ -144,34 +140,27 @@ a {
 .details {
 	display: flex;
 	flex-direction: column;
-	margin-left: 10px;
+	margin-left: 12px;
 }
-
-.details > a, .details div {
+.details div {
   padding-bottom: 3px;
 }
-
 .thumbnail img {
   width: 80px;
 }
-
 .thumbnail:hover {
 	cursor: default;
 }
-
 .thumbnail img:hover {
 	cursor: pointer;
 }
-
 .title a {
   font-size: 18px;
 }
-
 .comments {
   font-weight: bold;
   color: #616466;
 }
-
 .nsfw {
 	color: #d10023;
 	border: 1px solid red;
