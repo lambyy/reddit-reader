@@ -7,8 +7,8 @@ const orderPosts = ({ posts }) => {
   for (let subreddit in posts) {
     allPosts = allPosts.concat(posts[subreddit]);
   }
-  console.log(allPosts);
-  return allPosts;
+
+  return allPosts.sort( (a, b) => a.data.score - b.data.score);
 };
 
 const mapStateToProps = (state) => ({
