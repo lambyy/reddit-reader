@@ -4,7 +4,6 @@ import SearchBarContainer from './search/search_bar_container';
 import SearchResultContainer from './search/search_result_container';
 import PostContainer from './post/post_container';
 
-
 const App = () => (
   <div className="reddit-reader">
     <h1 className="header">
