@@ -1,12 +1,17 @@
 import React from 'react';
 
 const Post = ({ post }) => {
+  let thumb = post.thumbnail;
+  if (!thumb.includes('http') && thumb !== 'nsfw') {
+    thumb = 'default';
+  }
+
   const nsfw = post.over_18 ? <span className="nsfw">NSFW</span> : "";
 
   return (
     <div className="post">
       <a href={post.url} className="thumb">
-        <img src={post.thumbnail} />
+        <img src={thumb} />
       </a>
       <div className="details">
         <div className="title">
