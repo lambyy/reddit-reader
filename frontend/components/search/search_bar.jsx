@@ -17,6 +17,7 @@ class SearchBar extends React.Component {
   search(e) {
     e.preventDefault();
     this.props.searchSubreddit(this.state.query);
+    this.setState({ query: "" });
   }
 
   render() {
