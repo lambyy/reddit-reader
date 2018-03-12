@@ -12,4 +12,6 @@ npm install
 ```
 
 ## Usage
+Compile `bundle.js` by running `npm start`
+
 Open `reddit_reader.html` in browser to begin using the Reddit Reader!
