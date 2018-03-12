@@ -1,22 +1,21 @@
 import React from 'react';
 
 const Post = ({ post }) => {
-  let thumb = post.thumbnail;
-  if (!thumb.includes('http') && thumb !== 'nsfw') {
-    thumb = 'default';
+  let thumbnail = post.thumbnail;
+  if (!thumbnail.includes('http') && thumbnail !== 'nsfw') {
+    thumbnail = 'default';
   }
-
   const nsfw = post.over_18 ? <span className="nsfw">NSFW</span> : "";
 
   return (
     <div className="post">
-      <a href={post.url} className="thumb">
-        <img src={thumb} />
+      <a href={post.url} className="thumbnail">
+        <img src={thumbnail} />
       </a>
       <div className="details">
         <div className="title">
-          <a href={post.url}>{post.title}</a>
-          &nbsp; ({post.domain})
+          <a href={post.url}>{post.title}</a> &nbsp;
+          ({post.domain})
         </div>
         <div>/r/{post.subreddit}</div>
         <div>
@@ -26,7 +25,7 @@ const Post = ({ post }) => {
         <div>
           {nsfw}
           <a href={`https://www.reddit.com${post.permalink}`} className="comments">
-            {post.num_comments} comments
+            {`${post.num_comments} comments`}
           </a>
         </div>
       </div>

@@ -150,15 +150,15 @@ a {
   padding-bottom: 3px;
 }
 
-.thumb img {
+.thumbnail img {
   width: 80px;
 }
 
-.thumb:hover {
+.thumbnail:hover {
 	cursor: default;
 }
 
-.thumb img:hover {
+.thumbnail img:hover {
 	cursor: pointer;
 }
 
