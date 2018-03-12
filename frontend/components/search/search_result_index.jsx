@@ -10,6 +10,7 @@ class SearchResultIndex extends React.Component {
   subscribe(subreddit) {
     return () => {
       this.props.requestPosts(subreddit);
+      this.props.removeSubreddit(subreddit)
     };
   }
 
@@ -18,7 +19,7 @@ class SearchResultIndex extends React.Component {
     const resultsList = results.map( (result, idx) =>
       <SearchResult key={`result-${idx}`}
                     subreddit={result}
-                    subscribe={this.subscribe(result.slice(3, -1))} />
+                    subscribe={this.subscribe(result)} />
     );
 
     return (

@@ -4,7 +4,7 @@ const SearchResult = ({ subreddit, subscribe }) => {
 
   return (
     <div>
-      {subreddit}
+      {`/r/${subreddit}`}
       <button onClick={subscribe}>+</button>
     </div>
   );
