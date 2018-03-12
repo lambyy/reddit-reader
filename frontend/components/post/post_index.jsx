@@ -3,10 +3,6 @@ import React from 'react';
 import Post from './post';
 
 class PostIndex extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentWillMount() {
     this.props.requestPosts("todayilearned");
   }
