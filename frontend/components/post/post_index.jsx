@@ -4,7 +4,7 @@ import Post from './post';
 
 class PostIndex extends React.Component {
   componentWillMount() {
-    this.props.requestPosts("todayilearned");
+    this.props.requestPosts("news");
   }
 
   render() {
