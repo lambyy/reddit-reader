@@ -5,7 +5,7 @@ Reddit Reader is a streamlined reader for Reddit posts. Search and subscribe to 
 ## Installation
 ```
 // clone repository
-git clone https://github.com/lambyy/reddit_reader.git
+git clone https://github.com/lambyy/reddit-reader.git
 
 // install dependencies
 npm install
