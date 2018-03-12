@@ -23,12 +23,14 @@ class SearchBar extends React.Component {
   render() {
     return (
       <form className="search-bar">
+        <span>Search Subreddits by name</span>
         <input type="text"
           onChange={this.updateQuery}
+          placeholder="search"
           value={this.state.query}/>
         <input type="submit"
           onClick={this.search}
-          value="Search"/>
+          value="🔍"/>
       </form>
     );
   }

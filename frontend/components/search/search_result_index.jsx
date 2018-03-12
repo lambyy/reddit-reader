@@ -16,11 +16,15 @@ class SearchResultIndex extends React.Component {
 
   render() {
     const { results } = this.props;
-    const resultsList = results.map( (result, idx) =>
-      <SearchResult key={`result-${idx}`}
-                    subreddit={result}
-                    subscribe={this.subscribe(result)} />
-    );
+    let resultsList = <div className="no-results">No subreddits found</div>;
+
+    if (results.length !== 0) {
+      resultsList = results.map( (result, idx) =>
+        <SearchResult key={`result-${idx}`}
+          subreddit={result}
+          subscribe={this.subscribe(result)} />
+      );
+    }
 
     return (
       <div className="results">

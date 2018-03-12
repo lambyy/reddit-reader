@@ -3,8 +3,8 @@ import React from 'react';
 const SearchResult = ({ subreddit, subscribe }) => {
 
   return (
-    <div>
-      {`/r/${subreddit}`}
+    <div className="result">
+      <div>{`/r/${subreddit}`}</div>
       <button onClick={subscribe}>+</button>
     </div>
   );
