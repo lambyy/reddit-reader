@@ -23,7 +23,8 @@ class SubscriptionIndex extends React.Component {
 
     return (
       <div className="subscriptions">
-        {subscriptionsList}
+        <div>My Subreddits:&nbsp;</div>
+        <div className="list">{subscriptionsList}</div>
       </div>
     );
   }

@@ -21,7 +21,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: sans-serif, verdana, arial;
+	font-family: sans-serif, verdana, arial;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -42,7 +42,7 @@ a {
 .reddit-reader {
 	display: grid;
 	grid-template-columns: 1fr 25%;
-	grid-template-rows: 24px auto auto 1fr;
+	grid-template-rows: auto auto auto 1fr;
 	grid-template-areas:
 		"header header"
 		"subscriptions subscriptions"
@@ -52,6 +52,48 @@ a {
 
 .header {
 	grid-area: header;
+	font-size: 30px;
+	padding: 7px;
+	background-color: #cee3f8;
+	border-bottom: 1px solid #5f99cf;
+}
+
+.header img {
+	height: 40px;
+}
+
+.subscriptions {
+	grid-area: subscriptions;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	margin: 15px 12px 10px 12px;
+}
+
+.list {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.subscription {
+	display: flex;
+	align-items: center;
+	margin: 2px;
+	padding: 2px 0 2px 4px;
+	border: 1px solid #444;
+	background-color: #7bb850;
+	border-radius: 2px;
+}
+
+.subscription button {
+	margin-left: 3px;
+	border: none;
+	background-color: transparent;
+	color: white;
+}
+
+.subscription button:hover {
+	cursor: pointer;
 }
 
 .posts {

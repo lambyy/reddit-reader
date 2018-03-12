@@ -4,7 +4,7 @@ const Subscription = ({ subreddit, unsubscribe }) => {
 
   return (
     <div className="subscription">
-      {`/r/${subreddit}`}
+      <div>{`/r/${subreddit}`}</div>
       <button onClick={unsubscribe}>x</button>
     </div>
   );
